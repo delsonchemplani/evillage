@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="fonts/fonts.css">
 
     <link href="bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet" media="screen">
+
+        <link href="styles/custom-bs.css" type="text/css" rel="stylesheet" media="screen">
+
     <!-- endbuild -->
   </head>
   <body ng-app="smartvillageApp">
@@ -53,15 +56,42 @@
       </div>
     </div> -->
 
-
+<!-- <div id="custom-bootstrap-menu">
 <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+    <div class="collapse navbar-collapse navbar-menubuilder">
   <ul class="nav navbar-nav">
     <li class="active"><a href="#">Smart Village</a></li>
     <li><a href="#">Home</a></li>
     <li><a href="#">Services</a></li>
     <li><a href="#">About</a></li>
   </ul>
+</div>
 </nav>
+</div> -->
+
+
+<div class="header">
+<nav id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header"><a class="navbar-brand" href="#">Icon</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-menubuilder">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="/">Services</a>
+                </li>
+                <li><a href="/products">Villages</a>
+                </li>
+                <li><a href="/about-us">About Us</a>
+                </li>
+                <li><a href="/contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</div>
 
 
 
