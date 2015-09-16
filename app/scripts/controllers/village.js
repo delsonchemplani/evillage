@@ -8,15 +8,30 @@
  * Controller of the webappliedApp
  */
 angular.module('village',[])
-.constant('dataUrl','https://api.parse.com/1/classes/Districts')
+.constant('dataUrl','https://api.parse.com/1/classes/edist')
 .run(function ($http) {
 	$http.defaults.headers.common['X-Parse-Application-Id']
-	='pmHR8LoON2m1cc9UxKK6kYgLCXPf2y4TVD7BnvEB';
+	='WQt98H8Nfazb2Pu4zFAwksIt9t2eLH38hbgwrlRv';
 	$http.defaults.headers.common['X-Parse-REST-API-Key']
-	='pQaSXDSZR3ONDS65NxWt1XnTMGP2tl8H8RY5jB2b';
+	='eXbyil90DXyNSWPaAjpyyVdJg2YQm2z8raS8ykZX';
 })
   .controller('VillageCtrl', function ($scope,$http,dataUrl) {
  
+ $scope.address = {};
+  $scope.refreshAddresses = function(address) {
+    var params = {where:JSON.stringify({"name":{"$all":address}})};
+    return $http.get(
+      //'http://maps.googleapis.com/maps/api/geocode/json',
+      'https://api.parse.com/1/classes/edist',
+      {params: params}
+    ).then(function(response) {
+      $scope.addresses = response.data.results
+    });
+  };
+
+  
+
+
 $scope.data = {};
 $http.get(dataUrl)
 	.success(function (data){
@@ -25,5 +40,10 @@ $http.get(dataUrl)
 	.error(function (response){
 		$scope.data.error = response.error || response;
 	});
+
+
+//$scope.refreshAddresses = function(address) {
+    
+ // }
  
 });

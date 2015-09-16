@@ -1,9 +1,15 @@
-<div ng-controller="VillageCtrl" class="panel panel-default row">
-<div class="col-xs-3">
-	<h6>Set Your District:</h6>
- <select  style="width: 100%;">
-      <option ng-repeat="district in data.districts" value="{{district.id}}">{{district.name}}</option>
-    </select>
+<div ng-controller="VillageCtrl" >
+<div class="col-xs-5" style="height: 300px;">
+	<h6>Set Your Village:</h6>
+<ui-select ng-model="district.selected" theme="selectize" ng-disabled="disabled" style="width: 300px;">
+    <ui-select-match placeholder="Select or search a village in the list...">{{$select.selected.name}}</ui-select-match>
+    <ui-select-choices repeat="district in data.districts | filter: $select.search">
+      <span ng-bind-html="district.name | highlight: $select.search"></span>
+      <small ng-bind-html="district.dist_id | highlight: $select.search"></small>
+    </ui-select-choices>
+  </ui-select>
+
+
 	</div>
 
 </div>
