@@ -1,0 +1,9 @@
+<div ng-controller="VillageCtrl" class="panel panel-default row">
+<div class="col-xs-3">
+	<h6>Set Your District:</h6>
+ <select  style="width: 100%;">
+      <option ng-repeat="district in data.districts" value="{{district.id}}">{{district.name}}</option>
+    </select>
+	</div>
+
+</div>
