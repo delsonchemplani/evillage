@@ -17,21 +17,20 @@ angular
     'ngSanitize',
     'village',
     'ngTouch',
-    'ui.select'
+    'ui.bootstrap'
+
       ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
+        templateUrl: 'views/village.html',       
+         controller: 'VillageCtrl'
+      }).when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
-      }) .when('/village', {
-        templateUrl: 'views/village.html',
-        controller: 'VillageCtrl'
-       
+      }).when('/home', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl'       
       })
       .otherwise({
         redirectTo: '/'
