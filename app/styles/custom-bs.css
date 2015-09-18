@@ -48,3 +48,9 @@
 .btn-custom:hover {background: rgba(255, 255, 255, 1); border-color: rgba(173, 173, 173, 1); color: rgba(51, 51, 51, 1);}
 .btn-custom:active, .btn-custom:focus {background: rgba(235, 235, 235, 1); border-color: rgba(173, 173, 173, 1); color: rgba(51, 51, 51, 1);}
 
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      height:200px;
+      margin: auto;
+  }

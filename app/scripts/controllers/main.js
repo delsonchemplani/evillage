@@ -27,5 +27,32 @@ angular.module('smartvillageApp')
     });
   };
 
+
+
+
+$scope.myInterval = 5000;
+$scope.noWrapSlides = false;
+var slides = $scope.slides = [];
+var slides1 = $scope.slides1 = [];
+ slides.push({      
+        image: '../images/plumbs.jpg'      
+    },{image: '../images/paint.jpg'},{image: '../images/carp.jpg' });
+ 
+ slides1.push({      
+        image: '../images/vill1.jpg'      
+    },{image: '../images/vill4.jpg'},{image: '../images/vill3.jpg' });
+
+  /*$scope.addSlide = function() {
+    var newWidth = 600 + slides.length + 1;
+    slides.push({
+      //image: '//placekitten.com/' + newWidth + '/300',
+        image: '../images/' + newWidth + '/300',
+      text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' +
+        ['Cats', 'Kittys', 'Felines', 'Cutes'][slides.length % 4]
+    });
+  };
+  for (var i=0; i<4; i++) {
+    $*///scope.addSlide();
+ // }
     
   });
