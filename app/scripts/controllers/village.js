@@ -20,7 +20,7 @@ angular.module('village',[])
         //$('#my-modal').modal('show');
    // });
 })
-  .controller('VillageCtrl', function ($scope,$http,dataUrl) {
+  .controller('VillageCtrl', function ($scope,$rootScope,$http,dataUrl) {
  
   /*$scope.launch = function(which){
     var dlg = null;
@@ -124,9 +124,9 @@ $http.get(dataUrl)
 
 $scope.setLocation= function(){
 
-  $scope.mylocation=$scope.asyncSelected;
+  $rootScope.mylocation=$scope.asyncSelected;
   $('#my-modal').modal('hide');
-  $scope.setLocation=true;
+  $rootScope.setLocation=true;
 }
 
 
