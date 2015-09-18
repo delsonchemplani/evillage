@@ -15,6 +15,8 @@ angular.module('smartvillageApp')
       'Karma'
     ];
 
+
+$('#my-modal').modal('hide');
  $scope.address = {};
   $scope.refreshAddresses = function(address) {
     var params = {name: address, sensor: false};

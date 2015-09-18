@@ -20,7 +20,7 @@ angular.module('village',[])
         //$('#my-modal').modal('show');
    // });
 })
-  .controller('VillageCtrl', function ($scope,$rootScope,$http,dataUrl) {
+  .controller('VillageCtrl', function ($scope,$rootScope,$http,$location,dataUrl) {
  
   /*$scope.launch = function(which){
     var dlg = null;
@@ -126,7 +126,14 @@ $scope.setLocation= function(){
 
   $rootScope.mylocation=$scope.asyncSelected;
   $('#my-modal').modal('hide');
+//   $('#my-modal').modal('remove');
   $rootScope.setLocation=true;
+//  $location.path='/home';
+//  $rootScope.$apply(function() {
+
+ // $location.path("/home");
+  console.log($location.path());
+    //  });
 }
 
 
